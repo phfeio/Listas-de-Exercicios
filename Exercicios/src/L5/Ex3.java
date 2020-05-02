@@ -26,7 +26,7 @@ public class Ex3 {
         int opcao = 1;
 
         while (opcao == 1) {
-            
+
             Scanner s = new Scanner(System.in);
 
             System.out.println("Informe o L1:");
@@ -36,19 +36,21 @@ public class Ex3 {
             System.out.println("Informe o L3:");
             int lado3 = s.nextInt();
 
-               
-            if (lado1 == lado2 && lado1 == lado3) {
-                    System.out.println("Triangulo Equilatero, possui os 3 Lados Iguais");
-             
-                } else if ((lado1 == lado2) || (lado1 == lado3)) {
-                    System.out.println("Triangulo Isosceles, possui os 2 Lados Iguais");
-           
-                } else if(lado1 != lado2 || lado2 != lado3 || lado3 !=lado1) {
-                    System.out.println("Triângulo Escaleno, possui os 3 Lados Diferentes");
-                }
-            else{
+            if (lado1 == 0 || lado2 == 0 || lado3 == 0) {
+                System.out.println("Não é um triângulo");
+                //System.exit(0);
+
+            } else if (lado1 == lado2 && lado1 == lado3) {
+                System.out.println("Triangulo Equilatero, possui os 3 Lados Iguais");
+
+            } else if ((lado1 == lado2) || (lado1 == lado3)) {
+                System.out.println("Triangulo Isosceles, possui os 2 Lados Iguais");
+            } else if (lado1 != lado2 || lado2 != lado3 || lado3 != lado1) {
+                System.out.println("Triângulo Escaleno, possui os 3 Lados Diferentes");
             }
+
             System.out.println("------------------------------------------------");
+
             System.out.println("Deseja continuar? 1 = Sim, 2 = Não");
             opcao = s.nextInt();
             System.out.println("------------------------------------------------");
